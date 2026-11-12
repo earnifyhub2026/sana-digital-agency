@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sana Digital Agency helps businesses grow with responsive websites, SEO content writing, graphic design and digital marketing services.">
+  <meta name="theme-color" content="#07132f">
+  <title>Sana Digital Agency | Websites, SEO & Creative Design</title>
+  <style>
+    :root{--navy:#07132f;--blue:#2463eb;--cyan:#24c8e8;--ink:#14213d;--muted:#64748b;--paper:#f6f8fc;--white:#fff;--line:#e6ebf3;--shadow:0 18px 50px rgba(18,39,83,.12)}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);line-height:1.65;background:#fff}
+    a{text-decoration:none;color:inherit}
+    button{font:inherit}
+    .container{width:min(1160px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(230,235,243,.85)}
+    .nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:11px;font-size:1.25rem;font-weight:850;letter-spacing:-.6px}
+    .brand-mark{width:43px;height:43px;border-radius:14px;background:linear-gradient(135deg,var(--blue),var(--cyan));display:grid;place-items:center;color:white;font-weight:900;font-size:1.2rem;box-shadow:0 8px 20px #2463eb44}
+    .brand span:last-child{color:var(--blue)}
+    .nav-links{display:flex;align-items:center;gap:29px;font-size:.93rem;font-weight:650;color:#43516b}
+    .nav-links a:hover{color:var(--blue)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 21px;border-radius:13px;background:var(--blue);color:white;font-weight:750;border:1px solid var(--blue);box-shadow:0 9px 22px #2463eb35;transition:.2s}
+    .btn:hover{transform:translateY(-2px);background:#174fcf}
+    .btn-outline{background:white;color:var(--blue);box-shadow:none}
+    .menu-btn{display:none;background:#f3f6fc;border:1px solid var(--line);width:44px;height:44px;border-radius:12px;font-size:1.35rem;color:var(--ink)}
+    .hero{padding:86px 0 78px;background:radial-gradient(circle at 85% 18%,#dceaff 0,transparent 30%),linear-gradient(135deg,#f8fbff,#eef4ff)}
+    .hero-grid{display:grid;grid-template-columns:1.03fr .97fr;align-items:center;gap:54px}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 13px;border-radius:30px;background:#e4efff;color:#2158ce;font-size:.82rem;font-weight:800;letter-spacing:.7px;text-transform:uppercase}
+    h1{font-size:clamp(2.5rem,5vw,4.45rem);line-height:1.08;letter-spacing:-2.5px;margin:20px 0}
+    h1 span{background:linear-gradient(90deg,var(--blue),#08a9d1);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero p{max-width:560px;color:var(--muted);font-size:1.08rem}
+    .hero-actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:29px}
+    .trust-line{margin-top:29px;color:#7a879d;font-size:.9rem;font-weight:650}
+    .visual{position:relative;min-height:440px;border-radius:30px;background:linear-gradient(145deg,#08142f,#142b60 60%,#263b8e);box-shadow:0 30px 65px #11285b35;overflow:hidden;padding:26px;display:flex;align-items:center;justify-content:center}
+    .visual:before,.visual:after{content:"";position:absolute;border:1px solid #8aa9ff35;border-radius:50%;width:420px;height:420px}
+    .visual:after{width:300px;height:300px}
+    .screen{position:relative;z-index:2;width:100%;max-width:440px;background:#101f43;border:1px solid #a9c1ff40;border-radius:20px;padding:19px;box-shadow:0 20px 45px #0005;transform:rotate(-3deg)}
+    .screen-top{display:flex;justify-content:space-between;align-items:center;color:#dce8ff;font-size:.8rem;margin-bottom:18px}
+    .dots{display:flex;gap:5px}.dots i{width:7px;height:7px;border-radius:50%;background:#54c9e7}
+    .screen-title{color:white;font-size:1.15rem;font-weight:800;margin-bottom:14px}
+    .chart{height:120px;border-radius:13px;background:linear-gradient(180deg,#1e4f9a66,#1e4f9a05);border:1px solid #8eb4ff35;position:relative;overflow:hidden}
+    .chart svg{width:100%;height:100%}
+    .mini-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:12px}
+    .mini-card{padding:13px 9px;border:1px solid #8eb4ff35;background:#182d5a;border-radius:11px;color:#dce8ff;font-size:.68rem}
+    .mini-card b{display:block;font-size:1rem;color:#51d5ef;margin-top:3px}
+    .float-tag{position:absolute;z-index:3;background:#fff;border-radius:15px;padding:13px 17px;box-shadow:var(--shadow);font-weight:800;color:#20345a}
+    .tag-one{top:37px;right:14px}.tag-two{bottom:32px;left:5px}
+    .float-tag small{display:block;color:#73819a;font-weight:600;font-size:.72rem}
+    section{padding:82px 0}
+    .section-head{text-align:center;max-width:690px;margin:0 auto 42px}
+    .section-head h2{font-size:clamp(2rem,4vw,2.8rem);line-height:1.15;letter-spacing:-1.1px;margin:13px 0}
+    .section-head p{color:var(--muted)}
+    .services{background:#fff}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .card{padding:27px;border:1px solid var(--line);border-radius:20px;background:white;box-shadow:0 8px 30px #172c5010;transition:.25s}
+    .card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:#cbdcff}
+    .icon{width:53px;height:53px;border-radius:16px;background:#eaf1ff;color:var(--blue);display:grid;place-items:center;font-size:1.5rem;margin-bottom:19px}
+    .card h3{font-size:1.17rem;margin-bottom:9px}.card p{font-size:.94rem;color:var(--muted)}
+    .about{background:var(--paper)}
+    .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:55px;align-items:center}
+    .about-panel{padding:35px;border-radius:25px;background:linear-gradient(145deg,#0a1735,#173d85);color:white;min-height:330px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:var(--shadow)}
+    .about-panel .big{font-size:3rem;font-weight:900;line-height:1.1;color:#56d4ef}
+    .about-panel p{color:#d2def7;max-width:340px}
+    .about-copy h2{font-size:2.5rem;line-height:1.15;letter-spacing:-1px;margin:15px 0}
+    .about-copy p{color:var(--muted);margin-bottom:15px}
+    .checks{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:22px 0}
+    .checks span{font-weight:700;color:#344663}.checks span:before{content:"✓";color:#0aa6b8;font-weight:900;margin-right:9px}
+    .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .work{border-radius:20px;overflow:hidden;border:1px solid var(--line);background:white;box-shadow:0 8px 25px #172c500c;transition:.2s}
+    .work:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+    .work-art{height:185px;display:grid;place-items:center;padding:20px;color:white;font-size:1.35rem;font-weight:850;text-align:center}
+    .work-image{width:100%;height:260px;object-fit:cover;display:block;background:#f2f5fa}
+    .work-image.contain{object-fit:contain;padding:12px}
+    .work-copy{padding:19px}.work-copy h3{font-size:1.05rem;margin-bottom:5px}.work-copy p{font-size:.88rem;color:var(--muted)}
+    .portfolio-label{display:inline-block;margin-top:10px;padding:5px 9px;border-radius:30px;background:#edf3ff;color:#2459c8;font-size:.75rem;font-weight:800}
+    .note{font-size:.82rem;color:#8390a5;text-align:center;margin-top:18px}
+    .process{background:var(--paper)}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .step{padding:22px;border-radius:18px;background:white;border:1px solid var(--line)}
+    .step b{display:grid;place-items:center;width:37px;height:37px;border-radius:12px;background:#e8f0ff;color:var(--blue);margin-bottom:14px}
+    .step h3{font-size:1rem;margin-bottom:6px}.step p{font-size:.87rem;color:var(--muted)}
+    .cta{padding:0 0 82px;background:var(--paper)}
+    .cta-box{padding:47px;border-radius:27px;background:linear-gradient(110deg,#0b1a3d,#244fd0);color:white;display:flex;align-items:center;justify-content:space-between;gap:25px}
+    .cta-box h2{font-size:2rem;line-height:1.2;margin-bottom:9px}.cta-box p{color:#d8e4ff}
+    .cta-box .btn{background:white;color:#1e55d6;border-color:white;white-space:nowrap}
+    .contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:40px}
+    .contact-info h2{font-size:2.35rem;line-height:1.15;margin:14px 0}
+    .contact-info p{color:var(--muted);margin-bottom:20px}
+    .contact-detail{padding:14px 0;border-bottom:1px solid var(--line);font-weight:700}
+    form{padding:27px;border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow)}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    label{display:block;font-weight:700;font-size:.88rem;margin:0 0 7px}
+    input,textarea,select{width:100%;padding:13px 14px;border:1px solid #dce3ef;border-radius:11px;font:inherit;font-size:.93rem;margin-bottom:16px;outline:none;background:#fbfcff}
+    input:focus,textarea:focus,select:focus{border-color:var(--blue);box-shadow:0 0 0 3px #2463eb18}
+    textarea{min-height:120px;resize:vertical}
+    form button{cursor:pointer;width:100%}
+    footer{background:#07132f;color:#d5def1;padding:42px 0 22px}
+    .footer-top{display:flex;justify-content:space-between;gap:25px;align-items:center;padding-bottom:27px;border-bottom:1px solid #ffffff20}
+    footer .brand{color:white}footer .brand span:last-child{color:#55d2ed}
+    .footer-links{display:flex;gap:20px;flex-wrap:wrap;font-size:.9rem;color:#c1cce2}
+    .copyright{text-align:center;color:#8998b8;font-size:.83rem;padding-top:20px}
+    .whatsapp{position:fixed;right:20px;bottom:20px;z-index:40;width:56px;height:56px;border-radius:50%;background:#16b86a;color:white;display:grid;place-items:center;font-size:1.55rem;box-shadow:0 10px 25px #16b86a55}
+    @media(max-width:850px){.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.hero{padding-top:60px}.visual{min-height:390px}.cards,.work-grid{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr)}.nav-links{gap:16px}}
+    @media(max-width:640px){.nav{height:68px}.menu-btn{display:block}.nav-links{display:none;position:absolute;top:68px;left:0;right:0;background:white;padding:18px 5% 22px;border-bottom:1px solid var(--line);box-shadow:0 16px 25px #10244a12;flex-direction:column;align-items:stretch}.nav-links.open{display:flex}.nav-links a{padding:8px 0}.nav .nav-cta{display:none}.hero{padding:49px 0 55px}.hero-grid{gap:35px}h1{letter-spacing:-1.6px}.visual{min-height:330px;padding:17px}.tag-one{top:15px;right:8px}.tag-two{bottom:15px;left:4px}.float-tag{font-size:.83rem;padding:10px 12px}.cards,.work-grid,.steps{grid-template-columns:1fr}.about-panel{min-height:270px}.checks{grid-template-columns:1fr}.cta-box{padding:30px 24px;display:block}.cta-box .btn{margin-top:20px}.form-row{grid-template-columns:1fr;gap:0}section{padding:64px 0}.footer-top{align-items:flex-start;flex-direction:column}.contact-info h2{font-size:2rem}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="Sana Digital Agency home"><span class="brand-mark">SD</span><span>Sana <span>Digital Agency</span></span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a><a href="#services">Services</a><a href="#about">About</a><a href="#work">Our Work</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="btn nav-cta" href="#contact">Let’s Talk <span>↗</span></a>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">✦ Creative ideas. Digital growth.</span>
+        <h1>Build Your Brand.<br><span>Grow Online.</span></h1>
+        <p>We help businesses and creators build a stronger online presence with modern websites, SEO-friendly content and creative designs.</p>
+        <div class="hero-actions"><a class="btn" href="#contact">Start a Project <span>→</span></a><a class="btn btn-outline" href="#services">Explore Services</a></div>
+        <div class="trust-line">Web Design&nbsp; • &nbsp;SEO Content&nbsp; • &nbsp;Graphic Design</div>
+      </div>
+      <div class="visual" aria-label="Illustration of a digital analytics dashboard">
+        <div class="float-tag tag-one">✦ Creative Solutions<small>Designed around your goals</small></div>
+        <div class="screen">
+          <div class="screen-top"><strong>SANA / DIGITAL STUDIO</strong><span class="dots"><i></i><i></i><i></i></span></div>
+          <div class="screen-title">Your digital growth dashboard</div>
+          <div class="chart">
+            <svg viewBox="0 0 420 120" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="fill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#25c9e8" stop-opacity=".35"/><stop offset="1" stop-color="#25c9e8" stop-opacity="0"/></linearGradient></defs><path d="M0 94 C35 80 45 94 76 68 S120 82 150 60 S192 69 224 48 S270 65 300 33 S350 47 420 12 L420 120 L0 120Z" fill="url(#fill)"/><path d="M0 94 C35 80 45 94 76 68 S120 82 150 60 S192 69 224 48 S270 65 300 33 S350 47 420 12" fill="none" stroke="#38d4ed" stroke-width="3"/></svg>
+          </div>
+          <div class="mini-cards"><div class="mini-card">Website<b>Design</b></div><div class="mini-card">SEO<b>Content</b></div><div class="mini-card">Creative<b>Graphics</b></div></div>
+        </div>
+        <div class="float-tag tag-two">✓ Made for your business<small>Simple • Modern • Responsive</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">What we do</span><h2>Digital services to move your business forward</h2><p>Practical creative and online services to help you present your business professionally and reach the right audience.</p></div>
+      <div class="cards">
+        <article class="card"><div class="icon">⌘</div><h3>Website Design</h3><p>Responsive, clean and user-friendly websites for businesses, personal brands and portfolios.</p></article>
+        <article class="card"><div class="icon">⌕</div><h3>SEO Content Writing</h3><p>Helpful blog posts, website pages and SEO-friendly articles written for real readers.</p></article>
+        <article class="card"><div class="icon">✳</div><h3>Graphic Design</h3><p>Creative social media posts, flyers, invitations, banners and simple brand visuals.</p></article>
+        <article class="card"><div class="icon">↗</div><h3>On-Page SEO</h3><p>Content structure, headings, meta descriptions, internal links and basic page optimization.</p></article>
+        <article class="card"><div class="icon">▧</div><h3>Social Media Design</h3><p>Consistent visual content for Instagram, Facebook and other social platforms.</p></article>
+        <article class="card"><div class="icon">✎</div><h3>Website Content</h3><p>Clear homepage, about, service and contact page copy that explains what your business offers.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container about-grid">
+      <div class="about-panel"><div><span class="eyebrow">A creative digital partner</span><div class="big">Ideas into<br>online impact.</div></div><p>Thoughtful design and useful content can make your business easier to discover and trust.</p></div>
+      <div class="about-copy"><span class="eyebrow">About Sana Digital Agency</span><h2>Helping you show up with confidence online.</h2><p>Sana Digital Agency is a creative digital service brand focused on website design, SEO content writing and graphic design. Our goal is to make digital solutions clear, accessible and useful for growing businesses.</p><p>Whether you need a new website, a helpful blog article or eye-catching social media graphics, let’s discuss a solution that fits your goals.</p><div class="checks"><span>Mobile-friendly layouts</span><span>Clear communication</span><span>Reader-focused content</span><span>Creative visual design</span></div><a class="btn" href="#contact">Work With Us →</a></div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">Portfolio preview</span><h2>Creative work, made with purpose</h2><p>A preview of the types of projects Sana Digital Agency can create for clients.</p></div>
+      <div class="work-grid">
+        <article class="work"><a href="https://earnifyhub2026.github.io/responsive-business-website/" target="_blank" rel="noopener"><div class="work-art" style="background:linear-gradient(135deg,#10275b,#2678e8)">BUSINESS<br>WEBSITE</div><div class="work-copy"><h3>Responsive Business Website</h3><p>A live website project designed to present a business and its services.</p><strong>View Website ↗</strong></div></a></article>
+        <article class="work"><a href="https://earnifyhub2026.github.io/personal-portfolio-website/" target="_blank" rel="noopener"><div class="work-art" style="background:linear-gradient(135deg,#512a88,#d45d9b)">PERSONAL<br>PORTFOLIO</div><div class="work-copy"><h3>Personal Portfolio Website</h3><p>A live portfolio website to introduce skills, services and work.</p><strong>View Website ↗</strong></div></a></article>
+        <article class="work"><a href="https://earnifyhubpakistan.blogspot.com/" target="_blank" rel="noopener"><div class="work-art" style="background:linear-gradient(135deg,#075b62,#20b6a4)">EARNIFY HUB<br>PAKISTAN</div><div class="work-copy"><h3>Blog & SEO Content</h3><p>A Blogger website with beginner-friendly articles about SEO and online skills.</p><strong>Visit Blog ↗</strong></div></a></article>
+        <article class="work"><img class="work-image contain" src="images/glow-up-decor-logo.png" alt="Glow Up Decor monogram logo design in green and copper"><div class="work-copy"><h3>Glow Up Decor Logo</h3><p>An elegant monogram logo concept with a decorative emblem.</p><span class="portfolio-label">Logo Design</span></div></article>
+        <article class="work"><img class="work-image" src="images/baby-shower-invitation.png" alt="Blue and brown teddy bear baby shower invitation design"><div class="work-copy"><h3>Baby Shower Invitation</h3><p>A soft blue themed invitation design with playful baby elements.</p><span class="portfolio-label">Invitation Design</span></div></article>
+        <article class="work"><img class="work-image" src="images/creative-portfolio-cover.jpg" alt="Creative portfolio presentation cover design in orange black and cream"><div class="work-copy"><h3>Creative Portfolio Cover</h3><p>A modern editorial-style presentation cover with a bold layout.</p><span class="portfolio-label">Presentation Design</span></div></article>
+        <article class="work"><img class="work-image" src="images/graphic-design-company-flyer.png" alt="Green and beige graphic design company promotional flyer"><div class="work-copy"><h3>Graphic Design Company Flyer</h3><p>A promotional flyer concept highlighting branding and design services.</p><span class="portfolio-label">Flyer Design</span></div></article>
+        <article class="work"><img class="work-image" src="images/hiring-poster.png" alt="Colorful we are hiring recruitment poster design"><div class="work-copy"><h3>We’re Hiring Poster</h3><p>A bright recruitment poster concept for social media or job announcements.</p><span class="portfolio-label">Social Media Design</span></div></article>
+        <article class="work"><img class="work-image" src="images/wedding-invitation.png" alt="Floral watercolor wedding invitation with pastel gradient background"><div class="work-copy"><h3>Floral Wedding Invitation</h3><p>An elegant wedding invitation with watercolor florals and pastel colors.</p><span class="portfolio-label">Invitation Design</span></div></article>
+      </div>
+      <p class="note">Design previews are samples. Names, dates, contact details and other wording can be customized for each client.</p>
+    </div>
+  </section>
+
+  <section class="process">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">How it works</span><h2>A simple process from start to finish</h2><p>Clear steps help keep every project organized.</p></div>
+      <div class="steps">
+        <div class="step"><b>01</b><h3>Share Your Idea</h3><p>Tell us about your business, goals and the service you need.</p></div>
+        <div class="step"><b>02</b><h3>Plan the Work</h3><p>We discuss the scope, details, timeline and project requirements.</p></div>
+        <div class="step"><b>03</b><h3>Create & Review</h3><p>The first version is prepared for your feedback and review.</p></div>
+        <div class="step"><b>04</b><h3>Final Delivery</h3><p>After agreed revisions, your project is delivered to you.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta"><div class="container"><div class="cta-box"><div><h2>Have a project in mind?</h2><p>Let’s create something useful for your business.</p></div><a class="btn" href="#contact">Get in Touch ↗</a></div></div></div>
+
+  <section id="contact">
+    <div class="container contact-grid">
+      <div class="contact-info"><span class="eyebrow">Contact us</span><h2>Let’s talk about your next project.</h2><p>Share your project details by email or contact Sana Digital Agency directly on WhatsApp.</p><div class="contact-detail">✉ &nbsp; earnifyhubpk@gmail.com</div><div class="contact-detail">☏ &nbsp; +92 312 0980013</div><div class="contact-detail">⌖ &nbsp; Working online — Pakistan</div><a class="btn" style="margin-top:20px;background:#16b86a;border-color:#16b86a" href="https://wa.me/923120980013?text=Hello%20Sana%20Digital%20Agency%2C%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener">Chat on WhatsApp ↗</a></div>
+      <form id="contactForm">
+        <div class="form-row"><div><label for="name">Your name</label><input id="name" name="name" placeholder="Enter your name" required></div><div><label for="email">Email address</label><input id="email" name="email" type="email" placeholder="you@example.com" required></div></div>
+        <label for="service">What service do you need?</label><select id="service" name="service" required><option value="">Choose a service</option><option>Website Design</option><option>SEO Content Writing</option><option>Graphic Design</option><option>On-Page SEO</option><option>Social Media Design</option><option>Other</option></select>
+        <label for="message">Project details</label><textarea id="message" name="message" placeholder="Tell us a little about your project..." required></textarea>
+        <button class="btn" type="submit">Send Project Enquiry →</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container"><div class="footer-top"><a class="brand" href="#home"><span class="brand-mark">SD</span><span>Sana <span>Digital Agency</span></span></a><div class="footer-links"><a href="#home">Home</a><a href="#services">Services</a><a href="#about">About</a><a href="#work">Portfolio</a><a href="#contact">Contact</a></div></div><div class="copyright">© <span id="year"></span> Sana Digital Agency. All rights reserved.</div></div>
+</footer>
+<a class="whatsapp" href="https://wa.me/923120980013?text=Hello%20Sana%20Digital%20Agency%2C%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener" aria-label="Chat with Sana Digital Agency on WhatsApp">☏</a>
+<script>
+  const menuBtn=document.getElementById('menuBtn');
+  const navLinks=document.getElementById('navLinks');
+  menuBtn.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',open?'true':'false');menuBtn.textContent=open?'×':'☰';});
+  document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>{navLinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.textContent='☰';}));
+  document.getElementById('year').textContent=new Date().getFullYear();
+  document.getElementById('contactForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    const name=document.getElementById('name').value.trim();
+    const email=document.getElementById('email').value.trim();
+    const service=document.getElementById('service').value;
+    const message=document.getElementById('message').value.trim();
+    const subject=encodeURIComponent('Project Enquiry - '+service);
+    const body=encodeURIComponent('Name: '+name+'\nEmail: '+email+'\nService: '+service+'\n\nProject details:\n'+message);
+    window.location.href='mailto:earnifyhubpk@gmail.com?subject='+subject+'&body='+body;
+  });
+</script>
+</body>
+</html>
